@@ -16,12 +16,20 @@ function playGame(playerChoice){
     (playerChoice === "paper" && computer === "scissors") ||
     (playerChoice === "scissors" && computer === "rock")
     ){
-        console.log("You lose");
+        console.log("You lose... " + computer + " beats " + playerChoice);
     } else if (playerChoice === computer){
-        console.log("Its a tie");
+        console.log("Its a tie you both chose: " + computer);
     } else {
-        console.log("You win!");
+        console.log("You win! " + playerChoice + " beats " + computer);
     }
+
+}
+
+function repeatGame(){
+    for (i = 0; i < 5; i++){
+        
+    }
+
 
 }
 
