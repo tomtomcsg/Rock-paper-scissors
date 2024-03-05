@@ -9,6 +9,7 @@ let playerChoice = prompt("rock, paper, or scissors?").toLowerCase();
 let computerSelection = getComputerChoice().toLocaleLowerCase();
 
 function roundGame(playerChoice, computerSelection){
+
     if (
     (playerChoice === "rock" && computerSelection === "paper") ||
     (playerChoice === "paper" && computerSelection === "scissors") ||
@@ -16,9 +17,9 @@ function roundGame(playerChoice, computerSelection){
     ){
         return ("You lose... " + computerSelection + " beats " + playerChoice);
     } else if (playerChoice === computerSelection){
-        return ("Its a tie you both chose: " + playerChoice);
+        return ("Its a tie you both chose: " + computerSelection);
     } else {
-        return ("You win! " + playerChoice + " beats " + getComputerChoice());
+        return ("You win! " + playerChoice + " beats " + computerSelection);
     }
 }
 
@@ -40,13 +41,13 @@ function playGame() {
       }
     }
   
-    console.log("Final Score: You - " + playerScore + ", Computer - " + computerScore);
+    console.log("Final Score: You: " + playerScore + ", Computer: " + computerScore);
     if (playerScore > computerScore) {
-      console.log("You win the game!");
+      console.log("You win!");
     } else if (playerScore < computerScore) {
-      console.log("The computer wins the game!");
+      console.log("You lost... The computer wins!");
     } else {
-      console.log("It's a tie in the game!");
+      console.log("It's a tie!");
     }
   }
   
